@@ -13,9 +13,10 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
         allowNull: false,  
       },
-      display_name: {
+      displayName: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: 'display_name'
       },
       email: {
         type: DataTypes.STRING,
@@ -33,13 +34,12 @@ module.exports = (sequelize, DataTypes) => {
     {
       timestamps: false,
       tableName: 'users',
-      underscored: false,
     },
   );
 
   User.associate = (models) => {
     User.hasMany(models.BlogPost, {
-      foreignKey: 'user_id', as: 'BlogPost'
+      foreignKey: 'user_id', as: 'user_id'
     });
   };
 
