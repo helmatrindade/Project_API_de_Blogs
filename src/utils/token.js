@@ -1,18 +1,18 @@
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
-const { JWT_SECRET } = process.env;
+const secret = process.env.JWT_SECRET;
 
 const generateToken = (data) => {
   try {
     const obj = {
       expiresIn: '7d',
-      algorithn: 'HS256',
+      algorithm: 'HS256',
     };
 
     const token = jwt.sign({
       payload: data,
-    }, JWT_SECRET, obj);
+    }, secret, obj);
 
     return token;
   } catch (error) {
@@ -20,4 +20,9 @@ const generateToken = (data) => {
   }
 };
 
-module.exports = generateToken;
+const verifyToken = (token) => jwt.verify(token, secret);
+
+module.exports = {
+  generateToken,
+  verifyToken,
+};
