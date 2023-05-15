@@ -20,9 +20,6 @@ const generateToken = (data) => {
   }
 };
 
-const verifyToken = (token) => jwt.verify(token, secret);
-
 module.exports = {
   generateToken,
-  verifyToken,
 };
