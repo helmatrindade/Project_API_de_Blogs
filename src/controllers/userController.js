@@ -17,12 +17,23 @@ const getUser = async (_req, res) => {
   const users = await User.findAll({
     attributes: { exclude: ['password'] },
   });
-  console.log('users', users);
 
   return res.status(200).json(users);
+};
+
+const getUserById = async (req, res) => {  
+  const { id } = req.params;
+  const { type, message, users } = await userService.getUserById(id);
+
+  if (type === 404) {
+    return res.status(type).json({ message });
+  }
+
+  return res.status(type).json(users);
 };
 
 module.exports = {
   createUser,
   getUser,
+  getUserById,
 };

@@ -6,5 +6,6 @@ const userRouter = Router();
 
 userRouter.post('/', userController.createUser);
 userRouter.get('/', verifyToken, userController.getUser);
+userRouter.get('/:id', verifyToken, userController.getUserById);
 
 module.exports = userRouter;
