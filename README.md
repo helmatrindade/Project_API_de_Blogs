@@ -75,7 +75,6 @@ Neste projeto, minhas contribuições incluem:
   3. `GET /user` para recuperar informações do usuário.
   4. `GET /user/:id` para trazer o user baseado no id.
   5. `POST /categories` para adicionar uma nova categoria a  tabela no banco de dados.
-  6. `POST /categories` para trazer todas categorias do banco de dados.
   7. `GET /post` para trazer todos os blogs post.
 
 Essas contribuições representam minha parcela de trabalho neste projeto. Obrigada por conferir o projeto!
