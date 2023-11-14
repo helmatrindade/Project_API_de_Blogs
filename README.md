@@ -3,6 +3,14 @@
 ### 💻 Sobre o projeto
 Este projeto é uma API desenvolvida em Node.js, que utiliza o Sequelize para operações de CRUD em posts. Seguindo os princípios do REST, a API exige autenticação de usuário para criar posts. Além disso, os posts são categorizados, estabelecendo uma relação bidirecional, o que significa que os posts podem ser associados a uma ou várias categorias, e as categorias podem conter vários posts, permitindo uma organização flexível e eficaz do conteúdo do blog.
 <br>
+### Tecnologias e Ferramentas
+<div>
+    <img src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black' alt='JavaScript' />
+    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="NodeJS"/>
+    <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+    <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+    <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white" alt="jwt"/>
+</div>
 
 ### 💡 Orietações
 Este projeto utiliza contêineres Docker para gerenciar o ambiente de desenvolvimento. Isso facilita a configuração do ambiente e garante a consistência entre diferentes sistemas. Certifique-se de ter o Docker instalado em seu sistema antes de prosseguir.
